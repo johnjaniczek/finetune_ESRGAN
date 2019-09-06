@@ -48,37 +48,32 @@ One small video subfolder, test270 (few 2 videos, 7.7MB) is included so that som
 without downloading the entire video dataset
 
 
-________________________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________
 Listing of sub folders
 
--BhamidipatiJaniczek_Project (Main Project Folder)
-	-ESRGAN (Original Source Code)
-		-*finetune_video4.py (revised code for finetuning the ESRGAN model to perform better on video frames)
-		-*finetune_remote.py (revised code for finetuning the ESRGAN model to perform better on remote sensing images)
-		-*test_video_finetune.py (revised code for generating super resolution videos from the fine tuned model)
-		-*display_side_by_side.py (code for displaying videos side by side for visual comparison)
-		-*test_remote_sensing_ESRGAN.py (adapted code demonstrating issues of ESRGAN with remote sensing data)
-		-*test_video_ESRGAN.py (adapted code demonstrating issues of ESRGAN with video data)
-		-*architecture.py (architecture for ESRGAN model)
-		-*block.py (building blocks for model architecture)
-		-*net_interp.py (script for demonstrating interpolation)
+finetune_ESRGAN/ 		# main project folder with scripts to finetune and test models
+├── input			# sub-directory for input data
+│   ├── remote_sensing		# remote sensing input data
+│   │   ├── test		# test-split of remote sensing input data, high and low resolution
+│   │   │   ├── HR		
+│   │   │   └── LR		
+│   │   └── train		# train-split of remote sensing input data, high and low resolution
+│   │       ├── HR		
+│   │       └── LR		
+│   └── video			# video input data (need to download, see link)
+├── models			# sub-directory for trained models
+├── output			# model results/ouputs are stored here
+│   ├── remote_sensing		# remote sensing results			
+│   │   └── finetune_epochs	# results with varying number of finetuning epochs
+│   │       ├── 20epochs
+│   │       ├── 40epochs
+│   │       └── 60epochs
+│   ├── side_by_side		# input and output videos played side by side
+│   └── video			# video results
+└── __pycache__			
 
-		-figures (plots/images used to support analysis in published paper)
-		-models (directory to place pre-trained models)
-		-output (directory where results are stored)
-			-remote_sensing (sub folder for remote_sensing results)
-			-video (sub folder for video results)
-			-side_by_side (sub folder for videos side by side for comparison)
-		-input (directory with data that is used as input)
-			-LR (low resolution images provided with original source code to reproduce main results)
-			-remote_sensing (folder for remote sensing dataset from srtoolbox)
-				-HR (ground truth, high resolution x4 image quality)
-				-LR (model input, low resolution images with 1/4 image quality)
-			-video (folder for video dataset, many videos not included because of large size, can be downloaded from dropbox)
-				- test270 (included, folder of 270p videos used as model input for generating super resolution videos)
-				- test360 (NOT included, folder of 360p videos used as model input for generating super resolution videos)
-				- train (NOT included, 540p videos used for finetuning, no overlap with test vids)
-				- train2 (NOT included, original sized videos used for finetuning, no overlap with test vids
+
+
 ________________________________________________________________________________________________________________________________________
 
 Transfer learning, improvements, new features
@@ -101,21 +96,14 @@ Super Resolution Video Finetuning:
 	3. Data augmentation scheme (random frame grabbing and random cropping) to avoid overfitting and decrease training time
 	4. Ability to generate and save super resolution videos in a readable form (using unseen test videos)
 	5. Ability to combine videos side by side and overlay text for clarity in comparing super resolution videos
-________________________________________________________________________________________________________________________________________
-
+________________________________________________________________________________________________________________________________
 Motivation behind revised implementations
 
-Remote sensing super resolution: Personally, remote sensing is related to some of our thesis research work, so it made sense to try to
-fit remote sensing into the project. Also, remote sensing is a field where super resolution could be very useful because the relatively
-low spatiel resolution given the distance of the image results in poor image quality before compression. Super resolution images could
-be useful for creating sharper remote sensing images to make it easier for humans to analyze and possibly could be easier for training
-other Deep Learning algorithms to analyze and classify the earth/other planets remotely
+Remote sensing super resolution: Personally, remote sensing is related to some of our thesis research work, so it made sense to try to fit remote sensing into the project. Also, remote sensing is a field where super resolution could be very useful because the relatively low spatiel resolution given the distance of the image results in poor image quality before compression. Super resolution images could be useful for creating sharper remote sensing images.
 
-Super resolution video finetuning: Videos take up a large ammount of space and are often compressed due to storage and communication
-bandwith limits. Methods for enhancing resolution of compressed videos could be very useful for video streaming services such as 
-Youtube, Netflix, or even teleconference software. The super resolution videos also have interesting challenges because of artifacts
-from compression and motion blur that can be more challenging that still frame images that ESRGAN does well on.
-________________________________________________________________________________________________________________________________________
+Super resolution video finetuning: Videos take up a large ammount of space and are often compressed due to storage and communication bandwith limits. Methods for enhancing resolution of compressed videos could be very useful for video streaming services such as Youtube, Netflix, or even teleconference software. The super resolution videos also have interesting challenges because of artifacts from compression and motion blur that can be more challenging that still frame images.
+________________________________________________________________________________________________________________________________
+
 Instructions to finetune ESRGAN for generating more realistic remote sensing images
 
 ### dependencies: Python3, numpy, torch (version >= 0.4), torchvision, opencv, 

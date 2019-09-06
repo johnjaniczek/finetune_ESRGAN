@@ -50,7 +50,7 @@ without downloading the entire video dataset
 
 ________________________________________________________________________________________________________________________________
 Listing of sub folders
-
+'''bash
 finetune_ESRGAN/ 		# main project folder with scripts to finetune and test models
 ├── input			# sub-directory for input data
 │   ├── remote_sensing		# remote sensing input data
@@ -70,7 +70,8 @@ finetune_ESRGAN/ 		# main project folder with scripts to finetune and test model
 │   │       └── 60epochs
 │   ├── side_by_side		# input and output videos played side by side
 │   └── video			# video results
-└── __pycache__			
+└── __pycache__	
+'''
 
 
 

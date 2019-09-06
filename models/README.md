@@ -1,9 +1,8 @@
-## Place pretrained models here. 
+The original ESRGAN models are included here:
 
-We provide two pretrained models:
-
-1. `RRDB_ESRGAN_x4.pth`: the final ESRGAN model we used in our [paper](https://arxiv.org/abs/1809.00219). 
+1. `RRDB_ESRGAN_x4.pth`: the final ESRGAN model used in [paper](https://arxiv.org/abs/1809.00219). 
 2. `RRDB_PSNR_x4.pth`: the PSNR-oriented model with **high PSNR performance**.
 
-*Note that* the pretrained models are trained under the `MATLAB bicubic` kernel. 
-If the downsampled kernel is different from that, the results may have artifacts.
+As well as the fine tuned models
+3. `RDB_ESRGAN_remote_finetune.pth` the ESRGAN model finetuned with remote sensing images
+4. `RDB_ESRGAN_vid_finetune4.pth` the ESRGAN model finetuned with videos

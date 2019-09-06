@@ -1,0 +1,7 @@
+videos are large, so full dataset not included in submitted assignment
+
+test270 is included and can be used to reproduce video testing results
+
+if you want to train/finetune network, download the full video dataset from:
+https://www.dropbox.com/s/qagzn3lx9q9l1sn/video.zip?dl=0
+

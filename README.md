@@ -65,20 +65,22 @@ ________________________________________________________________________________
 
 ### Transfer learning, improvements, new features
 Remote Sensing Image Finetuning:
-	1. Create a perceptual feature extractor by importing pretrained vgg19 model and peeling off layers
-	2. Create a perceptual loss function by comparing extracted features from ground truth and generated images
-	3. Create a fine tuning routine by enabling gradients on all model parameters, initializing and adam optimizer, and
+
+	1) Create a perceptual feature extractor by importing pretrained vgg19 model and peeling off layers
+	2) Create a perceptual loss function by comparing extracted features from ground truth and generated images
+	3) Create a fine tuning routine by enabling gradients on all model parameters, initializing and adam optimizer, and
 	using the perceptual loss to backpropogate and optimize over several epochs.
-	4. Test on an unseen data set to validate the improved image quality over ESRGAN
+	4) Test on an unseen data set to validate the improved image quality over ESRGAN
 
 Super Resolution Video Finetuning:
-	1. All improvements from remote sensing finetuning also needed (feature extractor, perceptual loss function, and finetuning routine)
-	2. Data pipeline to import videos one frame at a time and feed into the super resolution generator
-	3. Data augmentation scheme (random frame grabbing and random cropping) to avoid overfitting and decrease training time
-	4. Ability to generate and save super resolution videos in a readable form (using unseen test videos)
-	5. Ability to combine videos side by side and overlay text for clarity in comparing super resolution videos
+	
+	1) All improvements from remote sensing finetuning also needed (feature extractor, perceptual loss function, and finetuning routine)
+	2) Data pipeline to import videos one frame at a time and feed into the super resolution generator
+	3) Data augmentation scheme (random frame grabbing and random cropping) to avoid overfitting and decrease training time
+	4) Ability to generate and save super resolution videos in a readable form (using unseen test videos)
+	5) Ability to combine videos side by side and overlay text for clarity in comparing super resolution videos
 ________________________________________________________________________________________________________________________________
-Motivation behind revised implementations
+### Motivation behind revised implementations
 
 Remote sensing super resolution: Personally, remote sensing is related to some of our thesis research work, so it made sense to try to fit remote sensing into the project. Also, remote sensing is a field where super resolution could be very useful because the relatively low spatiel resolution given the distance of the image results in poor image quality before compression. Super resolution images could be useful for creating sharper remote sensing images.
 

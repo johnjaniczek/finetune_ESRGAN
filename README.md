@@ -2,13 +2,13 @@ Project Team Members:
 Srilalitha Bhamidipati and John Janiczek
 
 ________________________________________________________________________________________________________________________________
-References and Citations:
+### References and Citations:
 Wang, Xintao, et al. "Esrgan: Enhanced super-resolution generative adversarial networks." Proceedings of the European Conference on Computer Vision (ECCV). 2018.
 
 Link to original code (provided by Wang et. al.):
 https://github.com/xinntao/ESRGAN
 ________________________________________________________________________________________________________________________________
-Links to datasets (4 sources of data):
+### Links to datasets (4 sources of data):
 1) ESRGAN code and provided test images
 source code: https://github.com/xinntao/ESRGAN
 
@@ -35,7 +35,7 @@ without downloading the entire video dataset
 
 
 ________________________________________________________________________________________________________________________________
-Listing of sub folders
+### Listing of sub folders
 ```bash
 finetune_ESRGAN/ 		# main project folder with scripts to finetune and test models
 ├── input			# sub-directory for input data
@@ -63,13 +63,7 @@ finetune_ESRGAN/ 		# main project folder with scripts to finetune and test model
 
 ________________________________________________________________________________________________________________________________
 
-Transfer learning, improvements, new features
-
-The improvements were for two tasks finetuning the model create more realistic remote sensing images and more realistic super resolution
-videos. Each task had it's own challenges and features that needed to be addressed. Note that the provided code only had a trained model
-and a script which loaded the pre trained model and used it, so we needed to recreate all aspects of training from scratch given the 
-descriptions in the paper
-
+### Transfer learning, improvements, new features
 Remote Sensing Image Finetuning:
 	1. Create a perceptual feature extractor by importing pretrained vgg19 model and peeling off layers
 	2. Create a perceptual loss function by comparing extracted features from ground truth and generated images

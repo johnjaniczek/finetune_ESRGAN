@@ -115,9 +115,9 @@ the finetuned images are.
 7. View outputs in './output/remote_sensing' and compare ESRGAN (original model generated images) with finetune (finetuned model generated images)
 ________________________________________________________________________________________________________________________________________
 
-Instructions to finetune ESRGAN for generating more realistic videos
+### Instructions to finetune ESRGAN for generating more realistic videos
 
-### dependencies: Python3, numpy, torch (version >= 0.4), torchvision, opencv, moviepy (moviepy only needed for generating side by side videos, which isn't required to test code)
+dependencies: Python3, numpy, torch (version >= 0.4), torchvision, opencv, moviepy (moviepy only needed for generating side by side videos, which isn't required to test code)
 
 
 1. If wanting to run the finetuning code, make sure to download the video training data set from:

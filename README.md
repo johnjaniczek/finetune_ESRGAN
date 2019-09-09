@@ -91,9 +91,9 @@ Remote sensing super resolution: Personally, remote sensing is related to some o
 Super resolution video finetuning: Videos take up a large ammount of space and are often compressed due to storage and communication bandwith limits. Methods for enhancing resolution of compressed videos could be very useful for video streaming services such as Youtube, Netflix, or even teleconference software. The super resolution videos also have interesting challenges because of artifacts from compression and motion blur that can be more challenging that still frame images.
 ________________________________________________________________________________________________________________________________
 
-Instructions to finetune ESRGAN for generating more realistic remote sensing images
+### Instructions to finetune ESRGAN for generating more realistic remote sensing images
 
-### dependencies: Python3, numpy, torch (version >= 0.4), torchvision, opencv, 
+dependencies: Python3, numpy, torch (version >= 0.4), torchvision, opencv, 
 Note: if wanting to skip to testing (no finetuning, go to step 6)
  
 1. Ensure remote sensing super resolution dataset is downloaded and placed in correct folder per above 

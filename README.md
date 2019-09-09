@@ -1,27 +1,13 @@
 Project Team Members:
 Srilalitha Bhamidipati and John Janiczek
 
-Selected Topic:
-Media Restoration
-Image and Video Restoration with Single Image Super Resolution
-
-Contributions:
-Team members worked together side by side for majority of work (50-50). Major contributions were:
-1. Reproducing original results (equal)
-2. Demonstrating issues of ESRGAN with remote sensing images (equal)
-3. Demonstrating issues of ESRGAN with videos (equal)
-4. Create the perceptual loss function from vgg19 feature stages (equal)
-5. Create a pipeline for finetuning with remote sensing images (equal)
-6. Create a pipeline for generating super resolution videos and finetuning (John)
-7. Create presentation slide deck for background on ESRGAN (Srilalitha)
-8. Create presentation slide deck for results of finetuning (John)
-________________________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________
 References and Citations:
 Wang, Xintao, et al. "Esrgan: Enhanced super-resolution generative adversarial networks." Proceedings of the European Conference on Computer Vision (ECCV). 2018.
 
 Link to original code (provided by Wang et. al.):
 https://github.com/xinntao/ESRGAN
-________________________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________
 Links to datasets (4 sources of data):
 1) ESRGAN code and provided test images
 source code: https://github.com/xinntao/ESRGAN
@@ -75,7 +61,7 @@ finetune_ESRGAN/ 		# main project folder with scripts to finetune and test model
 
 
 
-________________________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________
 
 Transfer learning, improvements, new features
 
